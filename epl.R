@@ -2,7 +2,7 @@
 
 #English Premier League 2011/12 Goal Analysis
 #The following analysis was performed on data provided by Opta on the 2011 - 2012 English Premier League (EPL) season. 
-This link will take you to the data: https://datahub.io/dataset/uk-premier-league-match-by-match-2011-2012.  
+#This link will take you to the data: https://datahub.io/dataset/uk-premier-league-match-by-match-2011-2012.  
 #Each row of data represents statistics on a single player from one game of the 2011 - 2012 EPL season. 
 #201 different statistics were collected for each player for every game they played in during the season.  
 #The other 9 fields were data about the player, the team they played on, the team they were playing against, and the date of the game.
