@@ -23,6 +23,7 @@ summary(test) #check for NA's
 
 full <- rbind(train, test) #row bind train and test
 
+#---------------------------------------------------
 #imputation
 
 ini <- mice(full, maxit=0, pri=F)
@@ -35,5 +36,17 @@ imp$imp$Species
 
 summary(imp)
 
-#next look at the distribution of the imputed data vs the original data
-#as well as pooling prior to modeling
+imp$imp$Sepal.Length #shows the 5 imputed values for each missing variable in the Sepal.Length column
+
+#---------------------------------------------------
+#imputed vs observed visualizations
+
+xyplot(imp, Sepal.Length ~ Sepal.Width+Petal.Length+Petal.Width) #scatterplot of observed vs actual
+#red = imputed. blue = observed
+
+densityplot(imp) #density plot of each of the 5 imputed datasets (red) vs the observed (blue)
+
+stripplot(imp, pch = 20) #plot by each data point
+
+#---------------------------------------------------
+#pooling
